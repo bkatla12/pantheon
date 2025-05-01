@@ -3,10 +3,12 @@ schemes:
     name: TCP Cubic
     color: black
     marker: '*'
+    use_tunnel: false
   vegas:
     name: TCP Vegas
     color: silver
     marker: 'h'
+    use_tunnel: false
   bbr:
     name: TCP BBR
     color: gold
@@ -27,6 +29,7 @@ schemes:
     name: Sprout
     color: orange
     marker: 'p'
+    use_tunnel: false
   quic:
     name: QUIC Cubic
     color: magenta

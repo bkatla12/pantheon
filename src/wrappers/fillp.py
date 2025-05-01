@@ -1,6 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 import os
+import time
 from os import path
 from subprocess import check_call
 
@@ -25,7 +26,9 @@ def main():
         return
 
     if args.option == 'sender':
-        os.environ['LD_LIBRARY_PATH'] = send_dir
+	time.sleep(2)
+        os.environ['LD_LIBRARY_PATH']= send_dir
+	args.ip = '127.0.0.1'
         cmd = [send_src, '-c', args.ip, '-p', args.port, '-r', 'testcase001']
         check_call(cmd, cwd=utils.tmp_dir)
         return

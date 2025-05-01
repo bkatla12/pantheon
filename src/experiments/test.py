@@ -683,7 +683,7 @@ class Test(object):
     def run_congestion_control(self):
         if self.flows > 0:
             try:
-                return self.run_with_tunnel()
+                return self.run_without_tunnel()
             finally:
                 utils.kill_proc_group(self.ts_manager)
                 utils.kill_proc_group(self.tc_manager)
